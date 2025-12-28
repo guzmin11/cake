@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oportunidade Brick Cake</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Meta Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '856933963920060');
+        fbq('track', 'PageView');
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=856933963920060&ev=PageView&noscript=1" />
+    </noscript>
+    <!-- End Meta Pixel Code -->
+</head>
+
+<body>
+
+    <div class="app-container">
+
+        <!-- STEP 1: INTRODUÇÃO -->
+        <div class="step-container active" id="step-1">
+            <h1 class="headline">O doce que explodiu nas redes sociais<br>está mudando a rotina de quem aprendeu a
+                fazer.</h1>
+            <p class="subheadline">Não é sobre confeitaria.<br>É sobre oportunidade.</p>
+
+            <img src="brick-cake-hero.png" alt="Brick Cake" class="hero-image">
+
+            <div style="margin-bottom: 2rem;">
+                <p class="text-green-italic">“Você não precisa ser expert pra começar.”</p>
+                <p class="text-green-italic">“Você não precisa investir muito pra testar.”</p>
+                <p class="text-green-italic">“Você só precisa estar no momento certo.”</p>
+            </div>
+
+            <p style="margin-bottom: 1rem; color: #ccc;">Enquanto ainda é novidade…</p>
+
+            <button class="btn btn-primary" onclick="nextStep()">👉 Quero aprender isso agora</button>
+        </div>
+
+        <!-- STEP 2: CONTEXTO -->
+        <div class="step-container" id="step-2">
+            <h2 class="headline">Quando você pensa em vender doces, o que mais <span class="text-green">TE TRAVA
+                    HOJE?</span></h2>
+
+            <button class="btn" onclick="nextStep()">Concorrência vendendo sempre a mesma coisa</button>
+            <button class="btn" onclick="nextStep()">Falta de algo diferente que chame atenção</button>
+            <button class="btn" onclick="nextStep()">Medo de investir e não vender</button>
+            <button class="btn" onclick="nextStep()">Falta de tempo pra receitas complicadas</button>
+        </div>
+
+        <!-- STEP 3: INTRODUÇÃO À OPORTUNIDADE -->
+        <div class="step-container" id="step-3">
+            <p class="subheadline">Algumas pessoas continuam vendendo os mesmos doces.<br>Outras começaram a vender algo
+                que chama atenção antes mesmo de provar.</p>
+
+            <p class="headline text-green" style="text-transform: uppercase;">Um doce que chama atenção<br>antes mesmo
+                da primeira mordida.</p>
+
+            <h3 style="margin-top: 1.5rem; color: #fff;">Um doce simples, visualmente irresistível<br>e que vende só
+                pela curiosidade.</h3>
+
+            <button class="btn btn-primary" onclick="nextStep()">👉 Quero ver como isso funciona</button>
+        </div>
+
+        <!-- STEP 4: DESEJO + PROVA LEVE -->
+        <div class="step-container" id="step-4">
+            <h2 class="headline">Você já tinha visto um doce que parece um <span
+                    class="text-green">TIJOLO</span>,<br>mas é <span class="text-green">BOLO</span> por dentro?</h2>
+
+            <button class="btn" onclick="nextStep()">Já vi e fiquei curioso(a)</button>
+            <button class="btn" onclick="nextStep()">Nunca vi, mas parece diferente</button>
+            <button class="btn" onclick="nextStep()">Vi nas redes e todo mundo comenta</button>
+
+            <img src="brick-news.png" alt="O doce que viralizou"
+                style="width: 100%; max-width: 400px; margin: 1.5rem auto 0; display: block; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+        </div>
+
+        <!-- STEP 5: AUTORIDADE / RESULTADO -->
+        <div class="step-container" id="step-5">
+            <h2 class="headline">Se você pudesse aprender uma receita que vende até <span class="text-green">4x O
+                    CUSTO</span>,<br>isso mudaria algo pra você?</h2>
+
+            <button class="btn" onclick="nextStep()">Sim, quero lucro alto com doces</button>
+            <button class="btn" onclick="nextStep()">Sim, se realmente vender fácil</button>
+            <button class="btn" onclick="nextStep()">Quero aprender isso agora</button>
+        </div>
+
+        <!-- STEP 6: PROVA SOCIAL -->
+        <div class="step-container" id="step-6">
+            <h2 class="headline" style="text-transform: uppercase; font-style: italic;">Veja o que acontece quando
+                alguém decide testar</h2>
+
+            <!-- Placeholder for Social Proof Images -->
+            <div class="carousel-container">
+                <div class="carousel-item">
+                    <img src="proof1.png" alt="Prova Social 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="proof2.png" alt="Prova Social 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="proof3.png" alt="Prova Social 3">
+                </div>
+            </div>
+
+            <p style="font-size: 0.9rem; color: #aaa; margin-top: 0.5rem;">(Arraste para o lado)</p>
+
+            <div style="margin: 1.5rem 0;">
+                <p class="headline" style="font-size: 1.2rem; margin-bottom: 0.5rem;">É assim que o <span
+                        class="text-green">Brick Cake</span> se vende sozinho.</p>
+                <p style="font-size: 1rem; color: #ccc;">Isso acontece todos os dias com quem testa algo diferente.</p>
+            </div>
+
+            <button class="btn btn-primary btn-pulse" onclick="nextStep()">👉 Quero algo que venda sozinho</button>
+        </div>
+
+        <!-- STEP 7: URGÊNCIA / HYPE -->
+        <div class="step-container" id="step-7">
+            <p class="subheadline">Como você viu, o Brick Cake está chamando atenção agora.</p>
+            <h2 class="headline">Você prefere aproveitar enquanto é novidade ou tentar vender quando todo mundo já
+                estiver fazendo igual?</h2>
+
+            <button class="btn" onclick="nextStep()">Enquanto ainda é novidade</button>
+            <button class="btn" onclick="nextStep()">Quanto antes melhor</button>
+            <button class="btn" onclick="nextStep()">Quero aproveitar agora</button>
+        </div>
+
+        <!-- STEP 8: OPORTUNIDADE FINANCEIRA -->
+        <div class="step-container" id="step-8">
+            <h2 class="headline">UM ÚNICO DOCE PODE VIRAR UMA RENDA EXTRA DE MILHARES DE REAIS POR MÊS.</h2>
+
+            <p class="subheadline text-green" style="font-weight: 600;">E algumas pessoas já estão vivendo isso agora.
+            </p>
+
+            <img src="ifood-proof.png" alt="Pedidos iFood" class="hero-image"
+                style="max-width: 280px; margin: 1rem auto 1rem; display: block;">
+
+            <p style="font-size: 0.95rem; color: #ccc; margin-bottom: 1rem; line-height: 1.4;">
+                Muitas pessoas já estão usando o <span class="text-green" style="font-weight: 600;">Brick Cake</span>
+                para gerar pedidos <strong>todos os dias</strong> no iFood e no WhatsApp. Mesmo começando do zero.
+            </p>
+
+            <p style="font-size: 0.85rem; color: #aaa; margin-bottom: 1.5rem; font-style: italic;">
+                Você não precisa de loja, funcionários ou experiência.
+            </p>
+
+            <button class="btn btn-primary btn-pulse" onclick="nextStep()">👉 QUERO APRENDER A LUCRAR HOJE</button>
+        </div>
+
+        <!-- STEP 9: DECISÃO -->
+        <div class="step-container" id="step-9">
+            <h2 class="headline">
+                <span
+                    style="font-size: 1.8rem; display: block; margin-bottom: 1rem; color: #fff; text-transform: uppercase;">Agora
+                    imagine isso sendo aplicado por você.</span>
+                <span style="font-size: 1.1rem; font-weight: 400; color: #ccc;">Se você tivesse acesso ao passo a passo
+                    completo hoje, o que faria?</span>
+            </h2>
+
+            <button class="btn" onclick="nextStep()">Começaria ainda essa semana</button>
+            <button class="btn" onclick="nextStep()">Testaria em casa primeiro</button>
+            <button class="btn" onclick="nextStep()">Quero ver tudo com calma</button>
+        </div>
+
+        <!-- STEP 10: TRANSIÇÃO (LOADING) -->
+        <div class="step-container" id="step-10">
+            <h2 class="headline">Analisando seu interesse…</h2>
+            <p class="subheadline">Verificando se essa oportunidade faz sentido pra você…<br>Preparando o acesso…</p>
+
+            <div class="progress-container">
+                <div class="progress-bar"></div>
+            </div>
+        </div>
+
+        <!-- STEP 11: PÁGINA DE VENDAS -->
+        <div class="step-container sales-page" id="step-11" style="text-align: left;">
+
+            <!-- TOPO -->
+            <div class="center-text" style="margin-bottom: 2rem;">
+                <p class="text-green-italic">“O doce que parece simples, mas vende diferente.”</p>
+                <p class="text-green-italic">“Não é sobre fazer bolo. É sobre criar demanda.”</p>
+                <p class="text-green-italic">“Você não precisa ser confeiteiro para começar.”</p>
+            </div>
+
+            <div class="vsl-container" id="vsl-player-container">
+                <!-- Player will be injected here when Step 11 is reached -->
+            </div>
+
+            <!-- CONEXÃO COM A DOR -->
+            <div class="glass-card">
+                <h2 class="headline center-text">Não é sobre fazer mais um doce.<br>É sobre ser o doce que as pessoas
+                    param pra olhar.</h2>
+                <p>O mercado está cheio de sabores.<br>Mas vazio de novidade.</p>
+                <p>O <strong>Brick Cake</strong> não compete por preço.<br>Ele compete por curiosidade.</p>
+                <p class="text-green-italic center-text">E curiosidade vende.</p>
+            </div>
+
+            <!-- HISTÓRIA REAL -->
+            <div class="glass-card">
+                <h3 class="headline">História da minha aluna Carla</h3>
+                <p>Começou sem experiência nenhuma.</p>
+                <p>Viu o Brick Cake nas redes e ficou curiosa.</p>
+                <p>Testou em casa, sem investir muito.</p>
+                <p>No primeiro dia, vendeu tudo o que produziu.</p>
+                <p>Hoje, precisa fechar pedidos mais cedo<br>porque a demanda aumentou.</p>
+                <p class="text-green-italic center-text" style="margin-top: 1rem;">“O método usado é exatamente o mesmo
+                    que você vai acessar agora.”</p>
+            </div>
+
+            <!-- O QUE VOCÊ VAI CONSEGUIR -->
+            <div style="margin-bottom: 2rem;">
+                <h2 class="headline center-text">O Que Você Vai Conseguir</h2>
+                <ul class="check-list">
+                    <li>Aprender mesmo começando do zero</li>
+                    <li>Criar um doce que vende por curiosidade</li>
+                    <li>Usar ingredientes simples</li>
+                    <li>Vender, presentear ou viralizar</li>
+                    <li>Seguir um passo a passo claro</li>
+                </ul>
+                <h3 class="headline center-text" style="color: var(--accent-green);">Isso não é hobby. É renda de
+                    verdade.</h3>
+            </div>
+
+            <!-- OFERTA ESSENCIAL -->
+            <div class="offer-card">
+                <h3 class="headline center-text">Opção Essencial</h3>
+                <p class="center-text">Guia Completo do Brick Cake</p>
+                <ul class="check-list">
+                    <li>Receita original passo a passo</li>
+                    <li>Estrutura e montagem</li>
+                    <li>Lista prática de ingredientes</li>
+                </ul>
+                <div class="price-tag">
+                    <span class="price-strike">De R$59</span><br>
+                    Por R$15,00
+                </div>
+                <button class="btn" style="border-color: var(--accent-green);"
+                    onclick="window.location.href='https://pay.cakto.com.br/7drdchi_702091'">👉 Começar agora</button>
+            </div>
+
+            <!-- OFERTA RECOMENDADA REDESIGN -->
+            <div class="offer-card highlight" style="padding: 3rem 1.5rem;">
+                <h3 class="offer-section-title center-text">Brick Cake Completo + Bônus Exclusivos</h3>
+                <p class="offer-subtitle center-text">Tudo o que você precisa para fazer, apresentar e vender o Brick
+                    Cake
+                    mesmo começando do zero</p>
+
+                <!-- BLOCO PRINCIPAL -->
+                <div style="margin-bottom: 2.5rem; text-align: left;">
+                    <h4
+                        style="color: var(--accent-green); font-size: 1.1rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1.5rem; text-align: center;">
+                        O que está incluído</h4>
+                    <ul class="check-list-large">
+                        <li><strong>✔ Todo o material do plano essencial</strong></li>
+                        <li><strong>✔ Todo o material abaixo</strong></li>
+                    </ul>
+                </div>
+
+                <!-- BÔNUS PADRÃO -->
+                <div style="margin-bottom: 2.5rem; text-align: left;">
+                    <h4
+                        style="color: var(--accent-green); font-size: 1.1rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1.5rem; text-align: center;">
+                        Bônus Exclusivos</h4>
+                    <ul class="check-list-large">
+                        <li><strong>🎁 Variações lucrativas de sabores</strong></li>
+                        <li><strong>🎁 Checklist de vendas rápidas</strong></li>
+                        <li><strong>🎁 Guia simples para viralizar no Instagram</strong></li>
+                    </ul>
+                </div>
+
+                <!-- BLOCO DE IMPACTO -->
+                <div class="offer-impact-box">
+                    <h4>🔥 BÔNUS DE ALTO IMPACTO INCLUSOS</h4>
+
+                    <div class="impact-item">
+                        <span class="impact-title">
+                            <span>COOKIES DE NEW YORK</span>
+                            <span class="price-red-strike">R$ 47</span>
+                        </span>
+                        <p class="impact-desc">Produto extra que vende sozinho e aumenta o valor de cada pedido</p>
+                    </div>
+
+                    <div class="impact-item">
+                        <span class="impact-title">
+                            <span>PRECIFICAÇÃO CORRETA</span>
+                            <span class="price-red-strike">R$ 37</span>
+                        </span>
+                        <p class="impact-desc">Aprenda a cobrar certo e parar de vender barato sem perceber</p>
+                    </div>
+
+                    <div class="impact-item">
+                        <span class="impact-title">
+                            <span>ROTEIROS DE VÍDEOS</span>
+                            <span class="price-red-strike">R$ 47</span>
+                        </span>
+                        <p class="impact-desc">Textos prontos para gravar e postar mesmo sem aparecer</p>
+                    </div>
+                </div>
+
+                <!-- BLOCO DE PREÇO POSICIONADO ABAIXO -->
+                <div class="price-total-box center-text">
+                    <p class="price-meta"
+                        style="font-size: 1.1rem; color: #fff; margin-bottom: 0.5rem; line-height: 1.3;">
+                        Tudo isso por menos do que você gastaria em ingredientes errados.
+                    </p>
+                    <span class="total-label">Valor total: R$ 229,90</span>
+                    <span class="hoje-label">HOJE:</span>
+                    <span class="price-value" style="font-size: 4.5rem;">R$ 19,90</span>
+                    <p class="price-meta" style="margin-top: 1rem; text-align: center;">
+                        Oferta especial por tempo limitado<br>
+                        <strong>Acesso imediato e vitalício</strong>
+                    </p>
+                </div>
+
+                <!-- CTA FINAL -->
+                <div style="margin-top: 1.5rem;">
+                    <button class="btn btn-primary btn-pulse" style="font-size: 1.3rem; padding: 1.5rem; width: 100%;"
+                        onclick="window.location.href='https://pay.cakto.com.br/ndd6eeh_702063'">
+                        👉 Quero o Pack Premium Agora
+                    </button>
+                    <p class="price-meta center-text" style="font-size: 0.9rem; margin-top: 1rem; line-height: 1.6;">
+                        Acesso imediato<br>
+                        Mesmo padrão de qualidade<br>
+                        <strong>Oferta disponível somente agora</strong>
+                    </p>
+                </div>
+            </div>
+
+            <!-- PROVA SOCIAL FINAL -->
+            <div class="glass-card">
+                <h3 class="headline center-text">Quem faz, recomenda</h3>
+                <!-- Card 1 -->
+                <div style="margin-bottom: 1rem; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 1rem;">
+                    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 5px;">
+                        <img src="mariana.png"
+                            style="width: 45px; height: 45px; border-radius: 50%; object-fit: cover; border: 2px solid var(--accent-green);">
+                        <strong>Mariana S.</strong>
+                    </div>
+                    <p style="font-size: 0.9rem;">"Vendi 30 unidades no primeiro fim de semana. Surreal!"</p>
+                </div>
+                <!-- Card 2 -->
+                <div style="margin-bottom: 1rem; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 1rem;">
+                    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 5px;">
+                        <img src="carla.png"
+                            style="width: 45px; height: 45px; border-radius: 50%; object-fit: cover; border: 2px solid var(--accent-green);">
+                        <strong>Carla F.</strong>
+                    </div>
+                    <p style="font-size: 0.9rem;">"A receita do Crunch é matadora. Todo mundo pede."</p>
+                </div>
+                <!-- Card 3 -->
+                <div>
+                    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 5px;">
+                        <img src="juliana.png"
+                            style="width: 45px; height: 45px; border-radius: 50%; object-fit: cover; border: 2px solid var(--accent-green);">
+                        <strong>Juliana M.</strong>
+                    </div>
+                    <p style="font-size: 0.9rem;">"O suporte é ótimo e o doce é realmente muito simples de fazer.
+                        Recomendo d+"</p>
+                </div>
+            </div>
+
+            <!-- GARANTIA -->
+            <div style="text-align: center; margin: 3rem 0;">
+                <img src="selo-garantia.png" alt="Garantia de 7 Dias"
+                    style="width: 150px; height: auto; margin-bottom: 1rem;">
+                <h3 class="headline">Teste sem risco por 7 dias</h3>
+                <p>Sem perguntas. Sem complicação.</p>
+            </div>
+
+            <!-- CTA FINAL -->
+            <div class="center-text" style="margin-bottom: 2rem;">
+                <p class="text-green-italic" style="margin-bottom: 1.5rem;">“Enquanto alguns só assistem tendências
+                    passarem… outros aproveitam.”</p>
+                <button class="btn btn-primary" style="font-size: 1.3rem;"
+                    onclick="window.location.href='https://pay.cakto.com.br/ndd6eeh_702063'">👉 Quero aprender
+                    agora</button>
+            </div>
+
+            <!-- FAQ SECTION AT THE BOTTOM -->
+            <div class="faq-section">
+                <h2 class="headline center-text" style="font-size: 1.5rem; margin-bottom: 2rem;">Dúvidas Frequentes</h2>
+
+                <details class="faq-item">
+                    <summary>Preciso de experiência em confeitaria para fazer o Brick Cake?</summary>
+                    <p>Não. O método foi criado do absoluto zero, justamente para quem nunca fez um doce na vida poder
+                        ter resultados imediatos.</p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>Quais materiais eu preciso?</summary>
+                    <p>Apenas utensílios básicos que você já tem na sua cozinha. Não precisa investir em maquinário caro
+                        ou fornos profissionais.</p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>Quanto tempo levará para aprender?</summary>
+                    <p>O método é direto ao ponto. Você consegue assistir tudo e fazer sua primeira fornada lucrativa
+                        ainda hoje.</p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>Posso vender Brick Cake no meu negócio?</summary>
+                    <p>Sim! Ele é perfeito para quem já vende doces e quer uma novidade viral no cardápio que vende sem
+                        esforço.</p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>Quando recebo o acesso?</summary>
+                    <p>O acesso é imediato. Assim que o pagamento for confirmado, você recebe tudo no seu e-mail para
+                        começar agora mesmo.</p>
+                </details>
+            </div>
+
+            <footer>
+                © 2025 - Criado por Brick Cake Brasil
+            </footer>
+
+        </div>
+
+        <script src="app.js"></script>
+        <script>
+            lucide.createIcons();
+        </script>
+</body>
+
+</html>

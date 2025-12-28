@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurando seu acesso... - Brick Cake</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-deep: #0a0707;
+            --accent-green: #2ecc71;
+            --glass-card: rgba(255, 255, 255, 0.04);
+            --glass-border: rgba(255, 255, 255, 0.12);
+            --text-main: #f0f0f0;
+            --text-muted: #999999;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-deep);
+            color: var(--text-main);
+            line-height: 1.5;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 2.5rem 1.5rem;
+        }
+
+        .container {
+            max-width: 520px;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* 1. Headline Section */
+        .headline {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 0.8rem;
+            color: #fff;
+            letter-spacing: -0.5px;
+        }
+
+        .subheadline {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            font-weight: 400;
+        }
+
+        .offer-notice {
+            font-size: 0.9rem;
+            color: #ff9a9e;
+            /* Soft red for urgency hint */
+            margin-bottom: 2rem;
+            font-weight: 500;
+        }
+
+        /* 2. Badge */
+        .badge {
+            display: inline-block;
+            background: rgba(46, 204, 113, 0.15);
+            color: var(--accent-green);
+            padding: 6px 14px;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 2.5rem;
+            border: 1px solid rgba(46, 204, 113, 0.3);
+        }
+
+        /* 3. Expectation Card */
+        .card {
+            background: var(--glass-card);
+            border: 1px solid var(--glass-border);
+            border-radius: 18px;
+            padding: 2.2rem;
+            margin-bottom: 2.5rem;
+            text-align: left;
+            backdrop-filter: blur(8px);
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1.2rem;
+            color: #fff;
+        }
+
+        .card strong {
+            color: var(--accent-green);
+        }
+
+        .check-list {
+            list-style: none;
+            margin-top: 1.2rem;
+        }
+
+        .check-list li {
+            position: relative;
+            padding-left: 28px;
+            margin-bottom: 0.8rem;
+            font-size: 1rem;
+            color: var(--text-main);
+        }
+
+        .check-list li::before {
+            content: "🚀";
+            position: absolute;
+            left: 0;
+            font-size: 0.9rem;
+        }
+
+        /* 4. Benefits Section */
+        .benefits-title {
+            color: var(--accent-green);
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+
+        .icon-list {
+            list-style: none;
+            text-align: left;
+            margin-bottom: 2.5rem;
+        }
+
+        .icon-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 1.2rem;
+            font-weight: 500;
+            font-size: 1.05rem;
+        }
+
+        .icon-list span {
+            font-size: 1.4rem;
+            line-height: 1;
+        }
+
+        /* 5. Transform Section */
+        .transform-section {
+            text-align: left;
+            margin-bottom: 2.5rem;
+            padding: 0 10px;
+        }
+
+        .transform-section p {
+            margin-bottom: 1rem;
+            color: #ddd;
+        }
+
+        /* 6. Important Card */
+        .important-card {
+            background: rgba(255, 255, 255, 0.02);
+            border-left: 3px solid var(--accent-green);
+            padding: 1.5rem;
+            margin-bottom: 2.5rem;
+            text-align: left;
+            border-radius: 0 12px 12px 0;
+        }
+
+        .important-card h4 {
+            color: var(--accent-green);
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            margin-bottom: 0.8rem;
+            letter-spacing: 1px;
+        }
+
+        /* 7. Main CTA */
+        .btn-primary {
+            display: block;
+            width: 100%;
+            background-color: var(--accent-green);
+            color: #000;
+            padding: 1.4rem;
+            border-radius: 14px;
+            font-size: 1.15rem;
+            font-weight: 800;
+            text-decoration: none;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 10px 20px rgba(46, 204, 113, 0.2);
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+
+        .btn-primary:active {
+            transform: scale(0.98);
+        }
+
+        .cta-subtext {
+            display: block;
+            font-size: 0.85rem;
+            color: #666;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        /* 8. Secondary CTA */
+        .btn-secondary {
+            display: inline-block;
+            background: transparent;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.95rem;
+            padding: 10px;
+            transition: color 0.3s ease;
+            cursor: pointer;
+            border: none;
+            margin-bottom: 3rem;
+        }
+
+        .btn-secondary:hover {
+            color: #fff;
+        }
+
+        /* Modal / Popup */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(5px);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .modal {
+            background: #151515;
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 3rem 2rem;
+            max-width: 400px;
+            width: 90%;
+            text-align: center;
+            animation: modalFadeUp 0.4s ease-out;
+        }
+
+        .modal h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--accent-green);
+        }
+
+        .modal p {
+            color: #ccc;
+            margin-bottom: 2rem;
+        }
+
+        .modal .btn {
+            background: var(--accent-green);
+            color: #000;
+            padding: 1rem 2rem;
+            border-radius: 10px;
+            font-weight: 700;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        @keyframes modalFadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 10px 20px rgba(46, 204, 113, 0.2);
+            }
+
+            50% {
+                transform: scale(1.03);
+                box-shadow: 0 15px 30px rgba(46, 204, 113, 0.4);
+            }
+
+            100% {
+                transform: scale(1);
+                box-shadow: 0 10px 20px rgba(46, 204, 113, 0.2);
+            }
+        }
+
+        .btn-primary {
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        .highlight {
+            color: var(--accent-green);
+        }
+
+        /* Small screens */
+        @media (max-width: 480px) {
+            .headline {
+                font-size: 1.6rem;
+            }
+
+            .subheadline {
+                font-size: 1rem;
+            }
+
+            .card {
+                padding: 1.5rem;
+            }
+
+            .icon-list li {
+                font-size: 0.95rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- 1. HEADLINE -->
+        <h1 class="headline">Antes de liberar seu acesso…</h1>
+        <p class="subheadline">Isso não faz parte do que você acabou de comprar.<br>Mas pode multiplicar seus resultados
+            muito mais rápido.</p>
+        <p class="offer-notice">Essa oferta aparece uma única vez após a compra.</p>
+
+        <!-- 2. BADGE -->
+        <div class="badge">ACESSO EXTRA OPCIONAL DISPONÍVEL AGORA</div>
+
+        <!-- 3. EXPECTATION CARD -->
+        <div class="card">
+            <h3 class="card-title">Essas receitas <span class="highlight">NÃO</span> são para aprender confeitaria.</h3>
+            <p style="color: #ccc; margin-bottom: 1.2rem;">São receitas testadas, simples e que vendem sozinhas. Feitas
+                para quem quer ganhar mais usando o mesmo público.</p>
+            <p style="font-weight: 600; margin-bottom: 1rem;">Ideal para quem quer:</p>
+            <ul class="check-list">
+                <li>Aumentar o ticket das vendas</li>
+                <li>Vender mais do que apenas Brick Cake</li>
+                <li>Aproveitar o mesmo cliente no WhatsApp e no delivery</li>
+                <li>Ter opções prontas para vender todos os dias</li>
+            </ul>
+        </div>
+
+        <!-- 4. BENEFITS -->
+        <h2 class="benefits-title">O QUE VOCÊ RECEBE NESTE PACOTE EXTRA</h2>
+        <ul class="icon-list">
+            <li><span>🍮</span>
+                <div><strong>50 receitas de pudim SEM forno</strong> com caldas exclusivas</div>
+            </li>
+            <li><span>🍩</span>
+                <div><strong>50 receitas de doces</strong> que vendem o ano inteiro</div>
+            </li>
+            <li><span>⚡</span>
+                <div><strong>Métodos simples</strong> sem equipamentos caros</div>
+            </li>
+            <li><span>📦</span>
+                <div>Receitas ideais para <strong>WhatsApp, encomendas, iFood e delivery</strong></div>
+            </li>
+            <li><span>✅</span>
+                <div><strong>Conteúdo prático</strong> focado em venda, não em teoria</div>
+            </li>
+        </ul>
+
+        <!-- 5. TRANSFORM SECTION -->
+        <div class="transform-section">
+            <p>Enquanto o <span class="highlight">Brick Cake</span> chama atenção e gera curiosidade, você já tem outros
+                produtos prontos para oferecer para o mesmo cliente que acabou de comprar de você.</p>
+            <p style="font-weight: 600; font-size: 1.1rem; color: #fff;">Isso é como transformar uma venda em várias.
+            </p>
+        </div>
+
+        <!-- 6. IMPORTANT CARD -->
+        <div class="important-card">
+            <h4>IMPORTANTE</h4>
+            <p>Você pode seguir apenas com o Brick Cake e já terá resultados com ele.</p>
+            <p style="margin-top: 0.8rem; font-weight: 500; color: #fff;">Ou aproveitar agora e sair com <span
+                    class="highlight">mais opções prontas para vender</span>, aumentando seu faturamento sem criar nada
+                do zero.</p>
+        </div>
+
+        <!-- PRICING BLOCK -->
+        <div style="text-align: center; margin-bottom: 2rem;">
+            <div style="font-size: 1rem; color: #ff4d4d; text-decoration: line-through; margin-bottom: 0.5rem;">
+                De R$ 145,00
+            </div>
+            <div style="font-size: 2.5rem; font-weight: 800; color: var(--accent-green); margin-bottom: 0.5rem;">
+                Por R$ 24,90
+            </div>
+            <div style="font-size: 0.85rem; color: var(--text-muted);">
+                Oferta única • Acesso vitalício
+            </div>
+        </div>
+
+        <!-- 7. MAIN CTA -->
+        <button class="btn-primary" onclick="window.location.href='https://pay.cakto.com.br/hnerds2_702111'">SIM, QUERO
+            AUMENTAR MEU
+            LUCRO</button>
+        <span class="cta-subtext">Acesso imediato.<br>Mesmo padrão de qualidade.<br>Oferta disponível somente
+            agora.</span>
+
+        <!-- 8. SECONDARY CTA -->
+        <button class="btn-secondary" id="btn-decline">Não, quero seguir apenas com o Brick Cake</button>
+
+    </div>
+
+    <!-- MODAL POPUP -->
+    <div class="modal-overlay" id="modal-success">
+        <div class="modal">
+            <h2>Obrigado pela compra!</h2>
+            <p>Seu acesso já foi enviado para o seu e-mail.<br>Verifique sua caixa de entrada para começar agora mesmo.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('btn-decline').addEventListener('click', function () {
+            window.location.href = 'novidade.html';
+        });
+    </script>
+
+</body>
+
+</html>
