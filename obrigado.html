@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obrigado pela sua compra! - Brick Cake</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --bg-deep: #0a0707;
+            --accent-green: #2ecc71;
+            --glass-card: rgba(255, 255, 255, 0.04);
+            --glass-border: rgba(255, 255, 255, 0.12);
+            --text-main: #f0f0f0;
+            --text-muted: #999999;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-deep);
+            color: var(--text-main);
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 2rem 1.5rem;
+        }
+
+        .container {
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .success-icon {
+            width: 80px;
+            height: 80px;
+            background: rgba(46, 204, 113, 0.15);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2rem;
+            border: 2px solid var(--accent-green);
+        }
+
+        .success-icon svg {
+            width: 40px;
+            height: 40px;
+            stroke: var(--accent-green);
+            stroke-width: 3;
+        }
+
+        .headline {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            color: #fff;
+            letter-spacing: -0.5px;
+            line-height: 1.2;
+        }
+
+        .subheadline {
+            font-size: 1.2rem;
+            color: var(--accent-green);
+            margin-bottom: 3rem;
+            font-weight: 600;
+        }
+
+        .info-card {
+            background: var(--glass-card);
+            border: 1px solid var(--glass-border);
+            border-radius: 18px;
+            padding: 2.5rem 2rem;
+            margin-bottom: 2rem;
+            text-align: left;
+            backdrop-filter: blur(8px);
+        }
+
+        .info-card h3 {
+            font-size: 1.3rem;
+            color: var(--accent-green);
+            margin-bottom: 1.5rem;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .steps-list {
+            list-style: none;
+            margin: 0;
+        }
+
+        .steps-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+            line-height: 1.6;
+        }
+
+        .steps-list li:last-child {
+            margin-bottom: 0;
+        }
+
+        .step-number {
+            background: var(--accent-green);
+            color: #000;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 1rem;
+            flex-shrink: 0;
+        }
+
+        .important-box {
+            background: rgba(46, 204, 113, 0.1);
+            border-left: 4px solid var(--accent-green);
+            padding: 1.5rem;
+            border-radius: 0 12px 12px 0;
+            margin-top: 2rem;
+        }
+
+        .important-box p {
+            font-size: 0.95rem;
+            color: #ddd;
+            margin-bottom: 0.8rem;
+        }
+
+        .important-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        .important-box strong {
+            color: var(--accent-green);
+        }
+
+        .support-section {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--glass-border);
+        }
+
+        .support-section h4 {
+            font-size: 1.1rem;
+            color: #fff;
+            margin-bottom: 1rem;
+        }
+
+        .support-section p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        @media (max-width: 480px) {
+            .headline {
+                font-size: 2rem;
+            }
+
+            .subheadline {
+                font-size: 1.05rem;
+            }
+
+            .info-card {
+                padding: 2rem 1.5rem;
+            }
+
+            .steps-list li {
+                font-size: 0.95rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- SUCCESS ICON -->
+        <div class="success-icon">
+            <svg fill="none" viewBox="0 0 24 24">
+                <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+        </div>
+
+        <!-- HEADLINE -->
+        <h1 class="headline">Obrigado pela sua compra!</h1>
+        <p class="subheadline">Seu acesso foi confirmado com sucesso ✅</p>
+
+        <!-- INFO CARD -->
+        <div class="info-card">
+            <h3>📧 Próximos Passos</h3>
+
+            <ul class="steps-list">
+                <li>
+                    <span class="step-number">1</span>
+                    <div>
+                        <strong>Verifique seu e-mail</strong><br>
+                        Enviamos todas as informações de acesso para o e-mail cadastrado na compra.
+                    </div>
+                </li>
+                <li>
+                    <span class="step-number">2</span>
+                    <div>
+                        <strong>Confira a caixa de spam</strong><br>
+                        Se não encontrar o e-mail na caixa de entrada, verifique a pasta de spam ou promoções.
+                    </div>
+                </li>
+                <li>
+                    <span class="step-number">3</span>
+                    <div>
+                        <strong>Acesse o conteúdo</strong><br>
+                        Clique no link do e-mail para acessar todo o material imediatamente.
+                    </div>
+                </li>
+            </ul>
+
+            <div class="important-box">
+                <p><strong>⚡ Acesso Imediato:</strong> Você já pode começar agora mesmo!</p>
+                <p><strong>🔒 Acesso Vitalício:</strong> O conteúdo é seu para sempre, sem mensalidades.</p>
+                <p><strong>✅ Garantia de 7 dias:</strong> Se não gostar, devolvemos 100% do seu dinheiro.</p>
+            </div>
+        </div>
+
+        <!-- SUPPORT SECTION -->
+        <div class="support-section">
+            <h4>Precisa de ajuda?</h4>
+            <p>Se você não recebeu o e-mail em até 10 minutos ou tiver qualquer dúvida, entre em contato com nosso
+                suporte. Estamos aqui para ajudar! 💚</p>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
