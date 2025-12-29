@@ -332,6 +332,7 @@ p.headline.text-green {
   border: 2px solid var(--accent-green);
   background: rgba(46, 204, 113, 0.05);
   position: relative;
+  overflow: hidden; /* <<< ADICIONE ISSO */
 }
 
 .offer-card.highlight::after {
@@ -458,7 +459,8 @@ p.headline.text-green {
   gap: 8px;
   margin-bottom: 0.3rem;
   width: 100%;
-  white-space: nowrap;
+  flex-wrap: wrap;        /* 🔥 ESSENCIAL */
+  white-space: normal;    /* 🔥 ESSENCIAL */
 }
 
 .impact-item .impact-title span:first-child {
@@ -592,4 +594,11 @@ footer {
   font-size: 0.85rem;
   border-top: 1px solid rgba(255, 255, 255, 0.05);
   margin-top: 2rem;
+}
+  
+/* === FIX DEFINITIVO DE SCROLL / ZOOM MOBILE === */
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
