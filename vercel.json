@@ -1,12 +1,7 @@
 {
   "rewrites": [
-    {
-      "source": "/aviso",
-      "destination": "/aviso.html"
-    },
-    {
-      "source": "/novidade",
-      "destination": "/novidade.html"
-    }
+    { "source": "/aviso", "destination": "/aviso.html" },
+    { "source": "/novidade", "destination": "/novidade.html" },
+    { "source": "/obrigado", "destination": "/obrigado.html" }
   ]
 }
