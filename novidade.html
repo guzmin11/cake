@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Última Oportunidade - Brick Cake</title>
-    <link rel="icon" href="/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
@@ -36,6 +35,7 @@
             justify-content: center;
             min-height: 100vh;
             padding: 2.5rem 1.5rem;
+            overflow-x: hidden;
         }
 
         .container {
@@ -232,6 +232,66 @@
             border-top: 1px solid var(--glass-border);
         }
 
+        /* Modal / Popup */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(5px);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .modal {
+            background: #151515;
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 2rem;
+            max-width: 400px;
+            width: 90%;
+            text-align: center;
+            animation: modalFadeUp 0.4s ease-out;
+        }
+
+        .modal h2 {
+            color: var(--accent-green);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .modal p {
+            color: #ccc;
+            margin-bottom: 1.5rem;
+        }
+
+        .modal .btn {
+            width: 100%;
+            padding: 1rem;
+            background: var(--accent-green);
+            color: #000;
+            border: none;
+            font-weight: 700;
+            border-radius: 12px;
+            cursor: pointer;
+        }
+
+        @keyframes modalFadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
         @media (max-width: 480px) {
             .headline {
                 font-size: 1.7rem;
@@ -300,9 +360,10 @@
         </span>
 
         <!-- SECONDARY CTA -->
-        <button class="btn-secondary" onclick="window.location.href='/obrigado'">
-    Não, quero seguir apenas com o Brick Cake
-</button>
+        <button class="btn-secondary" id="btn-decline">
+            Não, quero apenas meu acesso liberado
+        </button>
+
         <!-- GUARANTEE -->
         <div class="guarantee-text">
             🔒 Garantia de 7 dias • Acesso 100% seguro • Suporte incluído
@@ -310,8 +371,25 @@
 
     </div>
 
+    </div>
+
+    <!-- MODAL POPUP -->
+    <div class="modal-overlay" id="modal-success">
+        <div class="modal">
+            <h2>Acesso Liberado! 🎉</h2>
+            <p>Seu acesso ao <strong>Brick Cake</strong> já foi enviado para o seu e-mail.<br><br>Verifique sua caixa de
+                entrada (e spam) para começar agora mesmo.</p>
+            <button class="btn" onclick="document.getElementById('modal-success').style.display='none'">Entendi, vou
+                verificar!</button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('btn-decline').addEventListener('click', function () {
+            document.getElementById('modal-success').style.display = 'flex';
+        });
+    </script>
+
 </body>
 
-
 </html>
-
