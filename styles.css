@@ -332,21 +332,30 @@ p.headline.text-green {
   border: 2px solid var(--accent-green);
   background: rgba(46, 204, 113, 0.05);
   position: relative;
-  overflow: hidden; /* <<< ADICIONE ISSO */
+  overflow: hidden; /* ESSENCIAL – não remover */
 }
 
-.offer-card.highlight::after {
+/* Wrapper externo */
+.offer-card-wrapper {
+  position: relative;
+}
+
+/* Selo RECOMENDADO */
+.offer-card-wrapper::after {
   content: "RECOMENDADO";
   position: absolute;
-  top: -12px;
+  top: -14px;
   left: 50%;
   transform: translateX(-50%);
   background: var(--accent-green);
-  padding: 2px 10px;
-  border-radius: 10px;
-  font-size: 0.8rem;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.75rem;
   font-weight: bold;
+  color: #000;
+  z-index: 20;
 }
+
 
 .price-tag {
   font-size: 1.8rem;
@@ -602,5 +611,6 @@ html, body {
   max-width: 100%;
   overflow-x: hidden;
 }
+
 
 
