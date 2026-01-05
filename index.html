@@ -11,7 +11,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="mobile-fixes.css">
-    <link rel="icon" href="/favicon.ico">
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
@@ -271,12 +270,11 @@
                     <span class="price-strike">De R$59</span><br>
                     Por R$15,00
                 </div>
-                <button class="btn" style="border-color: var(--accent-green);"
-                    onclick="window.location.href='https://pay.cakto.com.br/7drdchi_702091'">👉 Começar agora</button>
+                <button class="btn" id="btn-essential" style="border-color: var(--accent-green);">👉 Começar
+                    agora</button>
             </div>
 
             <!-- OFERTA RECOMENDADA REDESIGN -->
-            <div class="offer-card-wrapper">
             <div class="offer-card highlight" style="padding: 3rem 1.5rem;">
                 <h3 class="offer-section-title center-text">Brick Cake Completo + Bônus Exclusivos</h3>
                 <p class="offer-subtitle center-text">Tudo o que você precisa para fazer, apresentar e vender o Brick
@@ -459,8 +457,49 @@
         <script>
             lucide.createIcons();
         </script>
+        <!-- UPSELL MODAL -->
+        <div class="modal-overlay" id="upsell-modal">
+            <div class="modal-content">
+                <h3 class="modal-title">⚠️ Antes de continuar...</h3>
+                <p class="modal-text">
+                    A maioria das pessoas escolhe o <span style="color: var(--accent-green); font-weight: 700;">Plano
+                        Premium</span>
+                    porque por apenas <strong style="color: #fff;">R$ 4 a mais</strong>, recebe mais receitas, mais
+                    estratégias e mais formas de lucrar com o mesmo cliente.
+                </p>
+                <p class="modal-text">
+                    Se você quer extrair o máximo desse método, o Premium é a melhor escolha.
+                </p>
+
+                <button class="btn-modal-primary"
+                    onclick="window.location.href='https://pay.cakto.com.br/ndd6eeh_702063'">
+                    🟢 Quero ir para o Plano Premium
+                </button>
+
+                <button class="btn-modal-secondary"
+                    onclick="window.location.href='https://pay.cakto.com.br/7drdchi_702091'">
+                    ⚪ Continuar com o Plano Essencial
+                </button>
+            </div>
+        </div>
+
+        <script>
+            const essentialBtn = document.getElementById('btn-essential');
+            const modal = document.getElementById('upsell-modal');
+
+            if (essentialBtn) {
+                essentialBtn.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    modal.style.display = 'flex';
+                });
+            }
+
+            modal.addEventListener('click', function (e) {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        </script>
 </body>
 
-
 </html>
-
