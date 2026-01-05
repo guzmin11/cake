@@ -611,6 +611,98 @@ html, body {
   max-width: 100%;
   overflow-x: hidden;
 }
+/* Upsell Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(5px);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal-content {
+  background: #121212;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 2rem;
+  max-width: 450px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  animation: modalPop 0.3s ease-out;
+}
+
+.modal-title {
+  font-size: 1.4rem;
+  color: #ffd700;
+  /* Yellow warning */
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.modal-text {
+  font-size: 1rem;
+  color: #ccc;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.btn-modal-primary {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  background: var(--accent-green);
+  color: #000;
+  font-weight: 700;
+  border: none;
+  border-radius: 10px;
+  margin-top: 1.5rem;
+  margin-bottom: 0.8rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: transform 0.2s;
+  text-transform: uppercase;
+}
+
+.btn-modal-primary:hover {
+  transform: scale(1.02);
+}
+
+.btn-modal-secondary {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #999;
+  padding: 0.8rem;
+  width: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+.btn-modal-secondary:hover {
+  color: #fff;
+  border-color: #fff;
+}
+
+@keyframes modalPop {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 
 
 
