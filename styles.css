@@ -285,19 +285,30 @@ p.headline.text-green {
   text-align: center;
 }
 
+/* VSL PROTECTION LAYER */
 .vsl-container {
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
   width: 100%;
-  max-width: 400px;
-  margin: 0 auto 2rem;
-  aspect-ratio: 9/16;
-  background: #000;
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #555;
-  border: 1px solid var(--glass-border);
-  overflow: hidden;
+  margin: 0 auto;
+}
+
+.vsl-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  cursor: default;
+  background: transparent;
+  pointer-events: none;
+  /* Deixa o clique passar para o play/pause no centro */
+}
+
+.vsl-container iframe {
+  z-index: 1;
 }
 
 .check-list {
@@ -702,6 +713,7 @@ html, body {
     transform: scale(1);
   }
 }
+
 
 
 
