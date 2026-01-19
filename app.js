@@ -28,45 +28,51 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
 
-        // Special logic for Step 11 (Sales Page) - Inject VTurb player
+        // Special logic for Step 11 (Sales Page) - Inject VSL player
         if (stepIndex === 11) {
-            injectVTurbPlayer();
+            injectVSLPlayer();
         }
 
         // Scroll to top on step change
         window.scrollTo(0, 0);
     }
 
-    // Function to inject VTurb player dynamically
+    // Function to inject VSL player dynamically
     let playerInjected = false;
-    function injectVTurbPlayer() {
+    function injectVSLPlayer() {
         if (playerInjected) return; // Only inject once
 
-        const container = document.getElementById('vsl-player-container');
-        if (!container) return;
+        const placeholder = document.getElementById('vsl-video-placeholder');
+        const hint = document.getElementById('vsl-controls-hint');
 
-        // Create the vturb-smartplayer element
-        const player = document.createElement('vturb-smartplayer');
-        player.id = 'vid-6950272290b70171e380baa3';
-        player.style.display = 'block';
-        player.style.margin = '0 auto';
-        player.style.width = '100%';
-        player.style.maxWidth = '400px';
+        if (placeholder) {
+            // Create the iframe dynamically to prevent early playback
+            const iframe = document.createElement('iframe');
+            iframe.id = 'vsl-video';
+            iframe.src = "https://drive.google.com/file/d/1O0CCJJVj8TUPeDJp1B08Kolx07sHAQPX/preview?autoplay=1";
+            iframe.style.position = 'absolute';
+            iframe.style.top = '-12%';
+            iframe.style.left = '0';
+            iframe.style.width = '100%';
+            iframe.style.height = '124%';
+            iframe.style.border = 'none';
+            iframe.allow = 'autoplay; encrypted-media; picture-in-picture';
+            iframe.allowFullscreen = true;
 
-        // Set autoplay and muted attributes for proper VTurb behavior
-        player.setAttribute('autoplay', 'true');
-        player.setAttribute('muted', 'true');
+            // Append to placeholder
+            placeholder.appendChild(iframe);
 
-        // Append player to container
-        container.appendChild(player);
+            // Exibe o aviso de "Clique para Pausar" por alguns segundos
+            setTimeout(() => { if (hint) hint.style.opacity = "1"; }, 2000);
+            setTimeout(() => { if (hint) hint.style.opacity = "0"; }, 6000);
 
-        // Inject the player script
-        const script = document.createElement('script');
-        script.src = 'https://scripts.converteai.net/8f699aa9-8fb0-4368-898e-7106526ff7d0/players/6950272290b70171e380baa3/v4/player.js';
-        script.async = true;
-        document.head.appendChild(script);
+            // Interface interaction
+            const container = placeholder.parentElement;
+            container.addEventListener('mouseenter', () => { if (hint) hint.style.opacity = "1"; });
+            container.addEventListener('mouseleave', () => { if (hint) hint.style.opacity = "0"; });
 
-        playerInjected = true;
+            playerInjected = true;
+        }
     }
 
     // Function to go to next step

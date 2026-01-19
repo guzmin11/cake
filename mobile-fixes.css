@@ -1,0 +1,247 @@
+/* Mobile Responsive Fixes for Step 11 (Sales Page) */
+@media (max-width: 768px) {
+
+    /* CRITICAL: Force no horizontal overflow on ANY element */
+    * {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    html,
+    body {
+        overflow-x: hidden !important;
+        max-width: 100vw;
+        width: 100%;
+    }
+
+    .app-container {
+        padding: 0.75rem;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    /* Sales page adjustments */
+    .sales-page {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    /* VSL container mobile fix - CRITICAL FIX */
+    .vsl-container {
+        max-width: 100% !important;
+        width: 100% !important;
+        margin: 0 auto 1.5rem;
+        aspect-ratio: unset !important;
+    }
+
+    .vsl-container iframe {
+        width: 100% !important;
+        height: 100% !important;
+    }
+
+    /* Headlines - reduce significantly */
+    .headline {
+        font-size: 1.35rem;
+        line-height: 1.3;
+        word-wrap: break-word;
+    }
+
+    .subheadline {
+        font-size: 0.95rem;
+    }
+
+    /* Offer cards - more compact */
+    .offer-card {
+        padding: 1.25rem 0.85rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .offer-card.highlight {
+        padding: 1.75rem 0.85rem;
+    }
+
+    /* Offer section titles - smaller */
+    .offer-section-title {
+        font-size: 1.15rem !important;
+        line-height: 1.3;
+    }
+
+    .offer-subtitle {
+        font-size: 0.85rem !important;
+    }
+
+    /* Price display - reduce size */
+    .price-tag {
+        font-size: 1.3rem;
+    }
+
+    .price-value {
+        font-size: 2.5rem !important;
+    }
+
+    .price-total-box {
+        padding: 1.25rem 0.75rem;
+    }
+
+    .total-label,
+    .hoje-label {
+        font-size: 0.85rem !important;
+    }
+
+    /* Impact box - more compact */
+    .offer-impact-box {
+        padding: 1.25rem 0.85rem;
+    }
+
+    .impact-item .impact-title {
+        font-size: 0.95rem;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
+    .impact-item .impact-desc {
+        font-size: 0.8rem;
+    }
+
+    .price-red-strike {
+        font-size: 0.85rem !important;
+    }
+
+    /* Buttons - smaller */
+    .btn,
+    .btn-primary {
+        font-size: 0.95rem;
+        padding: 0.9rem 0.75rem;
+    }
+
+    /* Glass cards - more compact */
+    .glass-card {
+        padding: 1.25rem 0.85rem;
+    }
+
+    /* Check lists - smaller text */
+    .check-list,
+    .check-list-large {
+        font-size: 0.85rem;
+    }
+
+    .check-list li,
+    .check-list-large li {
+        margin-bottom: 0.6rem;
+    }
+
+    /* FAQ section */
+    .faq-section {
+        padding: 1.25rem 0.85rem;
+    }
+
+    .faq-item summary {
+        font-size: 0.9rem;
+        padding: 0.9rem;
+    }
+
+    /* Guarantee section */
+    .guarantee-badge {
+        max-width: 100px;
+    }
+
+    /* Testimonials */
+    .testimonial-card {
+        padding: 0.9rem;
+    }
+
+    .testimonial-photo {
+        width: 50px;
+        height: 50px;
+    }
+
+    /* Hero image */
+    .hero-image {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Text adjustments */
+    .text-green-italic {
+        font-size: 0.85rem;
+    }
+
+    /* Price meta */
+    .price-meta {
+        font-size: 0.8rem !important;
+    }
+
+    /* Step container padding */
+    .step-container {
+        padding: 1rem 0.5rem;
+    }
+
+    /* CRITICAL: Force all text to wrap and never overflow */
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    span,
+    div,
+    li,
+    a,
+    button {
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
+        hyphens: auto;
+        max-width: 100%;
+    }
+
+    /* Specific fix for green text that's overflowing */
+    .text-green {
+        font-size: 0.9rem !important;
+        word-break: break-word;
+    }
+
+    /* Fix for any inline styles that might be causing issues */
+    [style*="font-size"] {
+        font-size: inherit !important;
+    }
+}
+
+/* Extra small devices - even more aggressive */
+@media (max-width: 480px) {
+    .app-container {
+        padding: 0.5rem;
+    }
+
+    .headline {
+        font-size: 1.2rem;
+    }
+
+    .offer-section-title {
+        font-size: 1.05rem !important;
+    }
+
+    .price-value {
+        font-size: 2.2rem !important;
+    }
+
+    .impact-item .impact-title {
+        font-size: 0.85rem;
+    }
+
+    .btn,
+    .btn-primary {
+        font-size: 0.9rem;
+        padding: 0.85rem 0.65rem;
+    }
+
+    .glass-card,
+    .offer-card {
+        padding: 1rem 0.65rem;
+    }
+
+    .check-list,
+    .check-list-large {
+        font-size: 0.8rem;
+    }
+}
