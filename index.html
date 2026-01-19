@@ -218,8 +218,28 @@
                     se tornou minha principal fonte de renda, mesmo começando do zero.</p>
             </div>
 
-            <div class="vsl-container" id="vsl-player-container">
-                <!-- Player will be injected here when Step 11 is reached -->
+            <!-- VSL WRAPPER (Control-Proof Player) -->
+            <div class="vsl-container" oncontextmenu="return false;"
+                style="max-width: 420px; margin: 0 auto 40px auto; position: relative;">
+                <div
+                    style="position: relative; padding-bottom: 177.77%; height: 0; overflow: hidden; border-radius: 12px; box-shadow: 0 10px 40px rgba(0,230,118,0.15); border: 1px solid rgba(255,255,255,0.1); background: #000;">
+
+                    <!-- O Iframe será injetado aqui dinamicamente pelo app.js no Passo 11 -->
+                    <div id="vsl-video-placeholder"
+                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></div>
+                    <!-- Escudo Inferior: Bloqueia cliques na barra de progresso -->
+                    <div
+                        style="position: absolute; bottom: 0; left: 0; width: 100%; height: 25%; z-index: 15; cursor: default; background: transparent; pointer-events: auto;">
+                    </div>
+                    <!-- Escudo Geral -->
+                    <div class="vsl-overlay" style="pointer-events: none !important;"></div>
+
+                    <!-- Aviso de Pausa -->
+                    <div id="vsl-controls-hint"
+                        style="position: absolute; bottom: 30%; left: 50%; transform: translateX(-50%); background: rgba(0,0,0,0.6); padding: 8px 15px; border-radius: 20px; font-size: 0.8rem; color: #fff; z-index: 20; pointer-events: none; opacity: 0; transition: opacity 0.3s;">
+                        Clique no centro para Pausar / Play
+                    </div>
+                </div>
             </div>
 
             <!-- CONEXÃO COM A DOR -->
